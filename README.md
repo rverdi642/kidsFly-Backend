@@ -1,2 +1,6 @@
-# kidsFly-Backend
-Backend for Lambda build week 2
+# kidsfly-backend
+
+Hosted Backend with Docs
+https://kids-fly-backend.herokuapp.com/
+
+To run dev server, run npm run-script dev
