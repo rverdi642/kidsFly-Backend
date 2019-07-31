@@ -17,7 +17,7 @@ module.exports = {
       directory: "./data/migrations"
     },
     seeds: {
-      directory: "./data/seeds"
+      directory: "./data/seeds/data"
     },
     useNullAsDefault: true
   },
@@ -96,10 +96,10 @@ module.exports = {
     },
     migrations: {
       directory: './data/migrations',
-      tableName: 'dbmigrations'
+      tableName: 'knex_migrations'
     },
     seeds: {
-      directory: "./data/seeds"
+      directory: "./data/seeds/data"
     }
   }
 
