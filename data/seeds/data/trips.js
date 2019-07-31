@@ -13,7 +13,8 @@ exports.seed = function(knex, Promise) {
     is_arriving: 1
   },
   {
-    user_id: 2, "Denver",
+    user_id: 2, 
+    airpot: "Denver",
     airline: "American",
     departure_time: faker.date.future(1),
     kids: 1,
