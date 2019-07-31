@@ -24,7 +24,7 @@ exports.seed = function(knex, Promise) {
     user_id: 3,
     airport: "D.C.",
     airline:"American",
-    departure_time: 1586125784525",
+    departure_time: 1586125784525,
     kids: 2,
     is_arriving: 0
   },
