@@ -3,7 +3,7 @@ exports.seed = function(knex, Promise) {
   return knex('user').del()
   .then(function () {
     // Inserts seed entries
-    return knex('tasks').insert([
+    return knex('user').insert([
       {
         first_name: "Admin",
         last_name: "Admin",

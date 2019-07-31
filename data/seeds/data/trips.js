@@ -3,7 +3,7 @@ exports.seed = function(knex, Promise) {
   return knex('trip').del()
   .then(function () {
     // Inserts seed entries
-    return knex('tasks').insert([
+    return knex('trip').insert([
   {
     user_id: 8,
     airport: "Saint Louis",
