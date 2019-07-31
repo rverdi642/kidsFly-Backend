@@ -1,95 +1,65 @@
-const faker = require("faker");
-
-module.exports = [
+exports.seed = function(knex, Promise) {
+  // Deletes ALL existing entries
+  return knex('tasks').del()
+  .then(function () {
+    // Inserts seed entries
+    return knex('tasks').insert([
   {
     user_id: 8,
-    airport: faker.random.arrayElement([
-      "D.C.",
-      "Saint Louis",
-      "Dallas",
-      "Denver"
-    ]),
-    airline: faker.random.arrayElement(["American", "Virgin", "Private"]),
+    airport: "Saint Louis",
+    airline: "Virgin",
     departure_time: faker.date.future(1),
-    kids: faker.random.number({ min: 1, max: 8 }),
-    is_arriving: faker.random.boolean()
+    kids: 1,
+    is_arriving: 1
   },
   {
-    user_id: 2,
-    airport: faker.random.arrayElement([
-      "D.C.",
-      "Saint Louis",
-      "Dallas",
-      "Denver"
-    ]),
-    airline: faker.random.arrayElement(["American", "Virgin", "Private"]),
+    user_id: 2, "Denver",
+    airline: "American",
     departure_time: faker.date.future(1),
-    kids: faker.random.number({ min: 1, max: 8 }),
-    is_arriving: faker.random.boolean()
+    kids: 1,
+    is_arriving: 0
   },
   {
     user_id: 3,
-    airport: faker.random.arrayElement([
-      "D.C.",
-      "Saint Louis",
-      "Dallas",
-      "Denver"
-    ]),
-    airline: faker.random.arrayElement(["American", "Virgin", "Private"]),
+    airport: "D.C.",
+    airline:"American",
     departure_time: faker.date.future(1),
-    kids: faker.random.number({ min: 1, max: 8 }),
-    is_arriving: faker.random.boolean()
+    kids: 2,
+    is_arriving: 0
   },
   {
     user_id: 4,
-    airport: faker.random.arrayElement([
-      "D.C.",
-      "Saint Louis",
-      "Dallas",
-      "Denver"
-    ]),
-    airline: faker.random.arrayElement(["American", "Virgin", "Private"]),
+    airport: "Saint Louis",
+    airline: "Virgin",
     departure_time: faker.date.future(1),
-    kids: faker.random.number({ min: 1, max: 8 }),
-    is_arriving: faker.random.boolean()
+    kids: 2,
+    is_arriving: 1
   },
   {
-    user_id: 5,
-    airport: faker.random.arrayElement([
-      "D.C.",
-      "Saint Louis",
-      "Dallas",
-      "Denver"
-    ]),
-    airline: faker.random.arrayElement(["American", "Virgin", "Private"]),
+    user_id: 5, 
+    airport: "D.C.",
+    airline: "Private",
     departure_time: faker.date.future(1),
-    kids: faker.random.number({ min: 1, max: 8 }),
-    is_arriving: faker.random.boolean()
+    kids: 3,
+    is_arriving: 1
   },
   {
     user_id: 6,
-    airport: faker.random.arrayElement([
-      "D.C.",
-      "Saint Louis",
-      "Dallas",
-      "Denver"
-    ]),
-    airline: faker.random.arrayElement(["American", "Virgin", "Private"]),
+    airport: "Denver",
+    airline:"Virgin",
     departure_time: faker.date.future(1),
-    kids: faker.random.number({ min: 1, max: 8 }),
-    is_arriving: faker.random.boolean()
+    kids: 1,
+    is_arriving: 0
   },
   {
     user_id: 7,
-    airport: faker.random.arrayElement([
-      "D.C.",
-      "Saint Louis",
-      "Dallas",
-      "Denver"
-    ]),
-    airline: faker.random.arrayElement(["American", "Virgin", "Private"]),
+    airport: "D.C.",
+    airline:  "Private",
     departure_time: faker.date.future(1),
-    kids: faker.random.number({ min: 1, max: 8 }),
-    is_arriving: faker.random.boolean()
+    kids: 2,
+    is_arriving: 0
   }
-];
+]);
+});
+};
+
